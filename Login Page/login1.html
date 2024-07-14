@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Amazon</title>
+    <link rel="stylesheet" href="login1.css">
+</head>
+<body>
+
+    <script>
+        const speech = new SpeechSynthesisUtterance()
+
+        function play() {
+            const message = document.getElementById("Username").value
+            speech.lang = "en"
+            speech.text = "Welcome to Amazon "+message
+            window.speechSynthesis.speak(speech)
+        }
+    </script>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="user-box">
+                <input id="Username" type="text" required>
+                <label for="">Username</label>
+            </div>
+
+            <div class="user-box">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+
+            <div class="sign">
+                <p id="signn" >Don't have an Account?</p>
+                <a id="signn" style="font-size: 12px;" href="./sign.html">Sign-in</a>
+            </div>
+
+            <div class="btn">
+                <a href="/2. CSS/Projects/Amazon Clone/index.html" onclick="play() , alert('You have successfully logged in!!')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Login
+                </a>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
